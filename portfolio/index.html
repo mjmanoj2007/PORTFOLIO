@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MJ Manoj | AI Developer & Full Stack Engineer</title>
+  <meta name="description"
+    content="MJ Manoj - Computer Engineering Student, AI Developer, Full Stack Developer, Startup Enthusiast & Blockchain Innovator. Transforming Ideas into Intelligent Digital Experiences.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Custom Cursor -->
+  <div id="cursor" class="cursor"></div>
+  <div id="cursor-trail" class="cursor-trail"></div>
+  <div id="ripple-container"></div>
+
+  <!-- Canvas for particles -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Navbar -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-logo">MJ<span class="accent">.</span></div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-toggle" id="nav-toggle">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-bg">
+      <div class="ocean-layer"></div>
+      <div class="aurora-layer"></div>
+      <div class="stars-layer" id="stars"></div>
+      <div class="floating-rocks" id="rocks"></div>
+      <div class="clouds-layer" id="clouds"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-profile">
+        <a href="#about" class="profile-link" title="Learn more about me">
+          <div class="profile-ring-outer">
+            <div class="profile-ring-inner">
+              <div class="profile-img-wrap">
+                <div class="profile-img-placeholder">MJ</div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="hero-text">
+        <h1 class="hero-name">MJ <span class="accent-glow">MANOJ</span></h1>
+        <div class="hero-roles">
+          <span id="typed-role"></span><span class="type-cursor">|</span>
+        </div>
+        <p class="hero-tagline">"Transforming Ideas into Intelligent Digital Experiences."</p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary"><span>Explore My Work</span>
+            <div class="btn-glow"></div>
+          </a>
+          <a href="#" class="btn btn-secondary" id="download-btn"><span>Download Resume</span></a>
+          <a href="#contact" class="btn btn-outline"><span>Contact Me</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-ocean-wave">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path d="M0,60 C360,120 1080,0 1440,60 L1440,120 L0,120 Z" fill="rgba(0,30,60,0.8)" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about section">
+    <div class="section-bg-wave top"></div>
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">WHO I AM</span>
+        <h2>About <span class="accent-glow">Me</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-visual">
+          <div class="about-card glass-card float-animation">
+            <div class="about-avatar">MJ</div>
+            <div class="about-status"><span class="status-dot"></span> Open to Opportunities</div>
+            <div class="about-stats-mini">
+              <div><span class="stat-num">10+</span><span class="stat-lbl">Projects</span></div>
+              <div><span class="stat-num">20+</span><span class="stat-lbl">Technologies</span></div>
+              <div><span class="stat-num">3+</span><span class="stat-lbl">Hackathons</span></div>
+            </div>
+          </div>
+          <div class="about-orb orb-1"></div>
+          <div class="about-orb orb-2"></div>
+        </div>
+        <div class="about-content">
+          <h3>Hello! <span class="wave-emoji">👋</span></h3>
+          <p>I'm <strong>MJ Manoj</strong>, a passionate Computer Engineering student driven by innovation in <span
+              class="highlight">Artificial Intelligence</span>, <span class="highlight">Full Stack Development</span>,
+            <span class="highlight">Blockchain Technology</span>, and <span class="highlight">Startup Building</span>.
+          </p>
+          <p>I enjoy creating impactful software solutions that solve real-world problems while continuously exploring
+            emerging technologies.</p>
+          <p>My goal is to become a world-class software engineer and entrepreneur who builds products that
+            <strong>improve millions of lives</strong>.
+          </p>
+          <div class="about-tags">
+            <span class="tag">🤖 AI Developer</span>
+            <span class="tag">💻 Full Stack</span>
+            <span class="tag">🔗 Blockchain</span>
+            <span class="tag">🚀 Startup</span>
+            <span class="tag">🎨 UI/UX</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-bg-wave bottom"></div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">EXPERTISE</span>
+        <h2>My <span class="accent-glow">Skills</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category glass-card">
+          <h3>⚡ Programming</h3>
+          <div class="skill-bubbles">
+            <span class="skill-bubble">C</span>
+            <span class="skill-bubble">C++</span>
+            <span class="skill-bubble">Java</span>
+            <span class="skill-bubble">Python</span>
+            <span class="skill-bubble">JavaScript</span>
+            <span class="skill-bubble">SQL</span>
+          </div>
+        </div>
+        <div class="skill-category glass-card">
+          <h3>🎨 Frontend</h3>
+          <div class="skill-bubbles">
+            <span class="skill-bubble">HTML</span>
+            <span class="skill-bubble">CSS</span>
+            <span class="skill-bubble">React</span>
+            <span class="skill-bubble">Tailwind CSS</span>
+          </div>
+        </div>
+        <div class="skill-category glass-card">
+          <h3>⚙️ Backend</h3>
+          <div class="skill-bubbles">
+            <span class="skill-bubble">Node.js</span>
+            <span class="skill-bubble">Express.js</span>
+          </div>
+        </div>
+        <div class="skill-category glass-card">
+          <h3>🗄️ Database</h3>
+          <div class="skill-bubbles">
+            <span class="skill-bubble">MongoDB</span>
+            <span class="skill-bubble">MySQL</span>
+          </div>
+        </div>
+        <div class="skill-category glass-card skill-wide">
+          <h3>🛠️ Other Tools</h3>
+          <div class="skill-bubbles">
+            <span class="skill-bubble">Git</span>
+            <span class="skill-bubble">GitHub</span>
+            <span class="skill-bubble">REST APIs</span>
+            <span class="skill-bubble">Blockchain</span>
+            <span class="skill-bubble">UI/UX Design</span>
+            <span class="skill-bubble">Video Editing</span>
+            <span class="skill-bubble">Canva</span>
+            <span class="skill-bubble">AI Tools</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">PORTFOLIO</span>
+        <h2>Featured <span class="accent-glow">Projects</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card glass-card tilt-card">
+          <div class="project-icon-wrap">
+            <div class="project-icon">🌾</div>
+            <div class="project-glow"></div>
+          </div>
+          <div class="project-content">
+            <h3>Smart Agriculture Calendar</h3>
+            <p>AI-powered agriculture management platform for modern farming.</p>
+            <div class="project-features">
+              <span>🗓️ Crop Calendar</span>
+              <span>📅 Seasonal Planning</span>
+              <span>💊 Fertilizer Tracking</span>
+              <span>🌦️ Weather Integration</span>
+              <span>📈 Market Prices</span>
+              <span>🧑‍🌾 Farmer Dashboard</span>
+            </div>
+            <div class="project-tags">
+              <span class="ptag">React</span>
+              <span class="ptag">Node.js</span>
+              <span class="ptag">AI</span>
+              <span class="ptag">MongoDB</span>
+            </div>
+          </div>
+          <div class="project-shimmer"></div>
+        </div>
+
+        <div class="project-card glass-card tilt-card">
+          <div class="project-icon-wrap">
+            <div class="project-icon">🤝</div>
+            <div class="project-glow"></div>
+          </div>
+          <div class="project-content">
+            <h3>Smart Community Help App</h3>
+            <p>Community assistance platform connecting people in need.</p>
+            <div class="project-features">
+              <span>🆘 Emergency Requests</span>
+              <span>🙋 Volunteer Management</span>
+              <span>📍 Nearby Help Locator</span>
+              <span>📢 Community Events</span>
+              <span>🔔 Notifications</span>
+              <span>🔐 Authentication</span>
+            </div>
+            <div class="project-tags">
+              <span class="ptag">React</span>
+              <span class="ptag">Tailwind</span>
+              <span class="ptag">Express</span>
+              <span class="ptag">MongoDB</span>
+            </div>
+          </div>
+          <div class="project-shimmer"></div>
+        </div>
+
+        <div class="project-card glass-card tilt-card">
+          <div class="project-icon-wrap">
+            <div class="project-icon">🎬</div>
+            <div class="project-glow"></div>
+          </div>
+          <div class="project-content">
+            <h3>QuickStudio Video Editor</h3>
+            <p>Modern mobile-friendly video editing application with AI effects.</p>
+            <div class="project-features">
+              <span>⏱️ Timeline Editing</span>
+              <span>✂️ Video Trimming</span>
+              <span>🎵 Audio Mixing</span>
+              <span>✨ AI Effects</span>
+              <span>📤 Export Options</span>
+              <span>📱 Mobile-Friendly</span>
+            </div>
+            <div class="project-tags">
+              <span class="ptag">JavaScript</span>
+              <span class="ptag">AI</span>
+              <span class="ptag">UI/UX</span>
+              <span class="ptag">React</span>
+            </div>
+          </div>
+          <div class="project-shimmer"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements Section -->
+  <section id="achievements" class="achievements section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">MILESTONES</span>
+        <h2>My <span class="accent-glow">Achievements</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="achievements-timeline">
+        <div class="achievement-item reveal">
+          <div class="achievement-medal">🏆</div>
+          <div class="achievement-content glass-card">
+            <h3>Blockchain Hackathon Participant</h3>
+            <p>Participated in a competitive blockchain hackathon showcasing innovation.</p>
+          </div>
+        </div>
+        <div class="achievement-item reveal">
+          <div class="achievement-medal">🥈</div>
+          <div class="achievement-content glass-card">
+            <h3>Innovative Blockchain Solution</h3>
+            <p>Built a groundbreaking blockchain-based solution during hackathon.</p>
+          </div>
+        </div>
+        <div class="achievement-item reveal">
+          <div class="achievement-medal">🚀</div>
+          <div class="achievement-content glass-card">
+            <h3>Real-World Software Projects</h3>
+            <p>Developed multiple impactful software projects solving real problems.</p>
+          </div>
+        </div>
+        <div class="achievement-item reveal">
+          <div class="achievement-medal">🎨</div>
+          <div class="achievement-content glass-card">
+            <h3>Canva Creative Contributor</h3>
+            <p>Active creative contributor with professional design skills.</p>
+          </div>
+        </div>
+        <div class="achievement-item reveal">
+          <div class="achievement-medal">💡</div>
+          <div class="achievement-content glass-card">
+            <h3>Passionate Startup Innovator</h3>
+            <p>Driving entrepreneurial innovation in the tech startup ecosystem.</p>
+          </div>
+        </div>
+        <div class="achievement-item reveal">
+          <div class="achievement-medal">🌟</div>
+          <div class="achievement-content glass-card">
+            <h3>Active Technology Learner</h3>
+            <p>Continuously expanding knowledge across emerging technologies.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="experience section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">JOURNEY</span>
+        <h2>My <span class="accent-glow">Experience</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="experience-grid">
+        <div class="exp-card glass-card tilt-card">
+          <div class="exp-icon">⚡</div>
+          <h3>Hackathons</h3>
+          <p>Competed in multiple hackathons, building innovative solutions under pressure and time constraints.</p>
+        </div>
+        <div class="exp-card glass-card tilt-card">
+          <div class="exp-icon">👥</div>
+          <h3>Team Collaboration</h3>
+          <p>Led and collaborated with diverse teams on complex software projects with agile methodologies.</p>
+        </div>
+        <div class="exp-card glass-card tilt-card">
+          <div class="exp-icon">🔗</div>
+          <h3>Full Stack Projects</h3>
+          <p>Built end-to-end web applications from database design to frontend deployment.</p>
+        </div>
+        <div class="exp-card glass-card tilt-card">
+          <div class="exp-icon">🤖</div>
+          <h3>AI Learning</h3>
+          <p>Deep exploration of machine learning, neural networks, and AI-powered application development.</p>
+        </div>
+        <div class="exp-card glass-card tilt-card">
+          <div class="exp-icon">🎨</div>
+          <h3>UI/UX Design</h3>
+          <p>Crafting user-centered designs with modern aesthetics, glassmorphism, and micro-interactions.</p>
+        </div>
+        <div class="exp-card glass-card tilt-card">
+          <div class="exp-icon">🎬</div>
+          <h3>Video Editing</h3>
+          <p>Professional video editing and content creation with modern tools and AI-enhanced effects.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item glass-card">
+          <div class="stat-number" data-target="10">0</div>
+          <div class="stat-plus">+</div>
+          <div class="stat-label">Projects Completed</div>
+        </div>
+        <div class="stat-item glass-card">
+          <div class="stat-number" data-target="20">0</div>
+          <div class="stat-plus">+</div>
+          <div class="stat-label">Technologies Learned</div>
+        </div>
+        <div class="stat-item glass-card">
+          <div class="stat-number" data-target="3">0</div>
+          <div class="stat-plus">+</div>
+          <div class="stat-label">Hackathons</div>
+        </div>
+        <div class="stat-item glass-card">
+          <div class="stat-number" data-target="1000">0</div>
+          <div class="stat-plus">+</div>
+          <div class="stat-label">Coding Hours</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">GET IN TOUCH</span>
+        <h2>Contact <span class="accent-glow">Me</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="contact-wrap">
+        <div class="contact-card glass-card float-animation">
+          <div class="contact-header">
+            <div class="contact-avatar">MJ</div>
+            <div>
+              <h3>MJ Manoj</h3>
+              <p class="contact-role">AI Developer & Full Stack Engineer</p>
+            </div>
+          </div>
+          <div class="contact-info">
+            <div class="contact-item">
+              <span class="ci-icon">📧</span>
+              <a href="mailto:mjmanoj2007@gmail.com">mjmanoj2007@gmail.com</a>
+            </div>
+            <div class="contact-item">
+              <span class="ci-icon">📍</span>
+              <span>Chennai, Tamil Nadu, India</span>
+            </div>
+          </div>
+          <div class="contact-buttons">
+            <a href="mailto:mjmanoj2007@gmail.com" class="btn btn-primary"><span>📧 Send Email</span></a>
+            <a href="https://www.linkedin.com/in/manoj-mj-67646937a?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+              target="_blank" class="btn btn-social linkedin"><span>💼 LinkedIn</span></a>
+            <a href="https://github.com/mjmanoj2007" target="_blank" class="btn btn-social github"><span>🐙
+                GitHub</span></a>
+            <a href="https://www.instagram.com/_manoj2007_?igsh=MWEydGY0YXg2ZTIwdA==" target="_blank"
+              class="btn btn-social instagram"><span>📸 Instagram</span></a>
+          </div>
+        </div>
+        <div class="contact-orbs">
+          <div class="contact-orb co-1"></div>
+          <div class="contact-orb co-2"></div>
+          <div class="contact-orb co-3"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-wave">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#021B3A" />
+      </svg>
+    </div>
+    <div class="footer-content">
+      <div class="footer-logo">MJ<span class="accent">.</span></div>
+      <p class="footer-text">Designed & Developed by <strong>MJ Manoj</strong></p>
+      <p class="footer-copy">© 2026 All Rights Reserved.</p>
+      <div class="footer-glow"></div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
